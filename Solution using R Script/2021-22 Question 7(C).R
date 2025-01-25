@@ -143,5 +143,3 @@ r_usingR = cor(data$Weight,data$ChestSize)
 error5 = abs(r-r_usingR)*100/r
 
 cat("Using Built in tool in R the error is ",error5,"\n")
-
-#this is just a test
