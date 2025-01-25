@@ -1,81 +1,30 @@
+---
+title: "Learning R Through Problem Solving"
 
-# IPE 207 - Probability and Statistics
-
-This repository is a project focused on solving year-wise final questions from the **IPE 207 (Probability and Statistics)** course using Python, MATLAB, and data analysis tools. The goal is to provide solutions and insights while improving coding skills and project management.
-
+output: html_document
 ---
 
-## Project Overview
+## What This Is About
 
-- **Course:** IPE 207 - Probability and Statistics  
-- **Institution:** Bangladesh University of Engineering and Technology (BUET)  
-- **Objective:** Solve, analyze, and document solutions to final exam problems year-wise.  
-- **Scope:** Focus on questions from 2020-21, with the potential to cover additional years.
+Welcome to my project repository! This is where I document my journey of learning R while solving past exam questions from a statistics course. The project combines two of my goals: mastering statistical concepts and building programming skills. This project started as a way to prepare for a statistics course, but it turned into much more. I decided to solve past exam questions using R, a programming language I was completely new to. I didn’t want to pay for an expensive course, so I used ChatGPT as my guide to learn R while working through real problems. Along the way, I’ve been learning, troubleshooting, and building something I’m proud of.
 
----
+## Why I Started This
 
-## Repository Structure
+I wanted this project to achieve two things. I wanted to learn R by doing. Instead of watching tutorials or reading theory, I wanted to jump right in. I knew I could learn this myself with some help. ChatGPT became my virtual tutor, answering my questions, explaining code, and even helping me debug. This self-driven approach gave me the freedom to learn at my own pace, ask unlimited questions, and explore concepts I was curious about.
 
-- **`data/`**: Contains scanned PDFs, datasets, and tables used in the analysis.  
-- **`scripts/`**: Python and MATLAB scripts for solutions and visualizations.  
-- **`notebooks/`**: Jupyter notebooks for interactive coding and exploratory analysis.  
-- **`results/`**: Outputs, such as generated graphs, solved problems, and summary tables.  
-- **`docs/`**: Documentation, guides, and project reports.
+## How I’m Tackling the Project
 
----
+I picked past exam problems to solve. For every question, I Broke the problem into steps.Iasked ChatGPT for help with R syntax, functions, and debugging. Experimented with the code until I understood both the math and the programming.I’ve been leaving comments in my scripts to explain my thought process and what I learned along the way.
 
-## How to Use
+## How This Works
 
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/your-username/IPE207-Probability-and-Statistics.git
-   ```
+This repository contains:
+  - A folder where I've kept questions from past term-final exams from my statistics course.
+  - My R script solutions, where I use R to solve each question step by step.
 
-2. **Set Up the Environment:**
-   - Install Python (preferably 3.9+).
-   - Install required libraries:
-     ```bash
-     pip install pandas numpy matplotlib scipy
-     ```
+## What’s Next?
 
-3. **Navigate Through the Repository:**
-   - `notebooks/`: Open `.ipynb` files for interactive solutions.
-   - `scripts/`: Run Python/MATLAB scripts for specific questions.
-   - `results/`: Review generated outputs and visualizations.
-
-4. **Run Scripts:**
-   ```bash
-   python scripts/question1_solution.py
-   ```
-
-5. **View Results:**
-   Outputs like tables, graphs, or calculations are stored in `results/`.
-
----
-
-## Tools and Technologies
-
-- **Programming Languages:** Python, MATLAB  
-- **Libraries:** Pandas, NumPy, Matplotlib, SciPy  
-- **Platform:** Jupyter Notebook, Visual Studio Code  
-
----
-
-## Goals
-
-- Complete solutions for the 2020-21 term.
-- Expand solutions to previous years.
-- Learn and apply coding and data analysis techniques.
-- Share progress and results on LinkedIn.
-
----
-
-## Contributing
-
-This is a personal learning project. Contributions are currently not open.  
-
----
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+This is still an ongoing project, and I have big plans for its future:
+- Solve more advanced questions, including regression and ANOVA.
+- Rearrange my R scripts for better readability and re usability.
+- Explore advanced Markdown formatting and R notebooks for improved documentation.
