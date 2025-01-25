@@ -1,8 +1,4 @@
----
-title: "Learning R Through Problem Solving"
-
-output: html_document
----
+# Learning R Through Problem Solving #
 
 ## What This Is About
 
