@@ -20,7 +20,7 @@ datatext = "Weight	ChestSize
 #(iii) Find a 99% confidence interval for the average chest size at x=3.5
 #(iv) Find a 95% prediction interval at x=3.5
 #(v) Calculate r (correlation coefficient).
-#(vi) Test the null hypothesis that ρ=0 against the alternative that ρ>0ρ>0 at the 0.01 level of significance.
+#(vi) Test the null hypothesis that ρ=0 against the alternative that ρ>0 at the 0.01 level of significance.
 #(vii) What percentage of the variation in infant chest sizes is explained by differences in weight?
 
 data = read.table(text=datatext,header = TRUE, sep ="\t")
@@ -143,3 +143,9 @@ r_usingR = cor(data$Weight,data$ChestSize)
 error5 = abs(r-r_usingR)*100/r
 
 cat("Using Built in tool in R the error is ",error5,"\n")
+
+#now for problem (vi)..
+#ρ is the population correlation co-efficient. For a model with one independent variable, it is equivalent to testing..
+#the null hypothesis that B1 = 0
+
+#to do this , we could either use normal formulations, or built in R tools
