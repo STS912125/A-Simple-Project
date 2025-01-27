@@ -172,3 +172,4 @@ r2 = summary(model)$r.squared
 perct = r2*100
 cat(perct, "% of of the variation in infant chest sizes is explained by differences in weight")
 
+#finally done :)
