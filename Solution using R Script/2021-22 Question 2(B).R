@@ -10,11 +10,15 @@
 #what is the probability that the individual has the disease?
 
 P_disease = 1/500
-P_nodisease = 1-p_disease
+P_nodisease = 1-P_disease
 P_pos_given_disease = 0.95
 P_pos_given_nodisease = 0.01
 
-P_disease_given_positive = P_disease*P_pos_given_disease/(P_disease*P_pos_given_disease
+P_disease_given_positive = P_disease*P_pos_given_disease/(P_disease * P_pos_given_disease
                                                           +  P_nodisease*P_pos_given_nodisease)
 
-cat(""
+cat("probability of individual has the disease is", P_disease_given_positive)
+
+
+
+
