@@ -36,7 +36,7 @@ mean_x = mean(data$Weight)
 mean_y = mean(data$ChestSize)
 
 B1_acc_to_formula = sum((data$Weight - mean_x) * (data$ChestSize - mean_y))/sum((data$Weight - mean_x)^2)
-B0_acc_to_formula = mean_y - B1* mean_x
+B0_acc_to_formula = mean_y - B1_acc_to_formula* mean_x
 
 #I also could have done this using R's built in linear regression model
 
@@ -148,4 +148,27 @@ cat("Using Built in tool in R the error is ",error5,"\n")
 #ρ is the population correlation co-efficient. For a model with one independent variable, it is equivalent to testing..
 #the null hypothesis that B1 = 0
 
-#to do this , we could either use normal formulations, or built in R tools
+#to do this , we could either use normal formulations, or built in R tools..
+#I'm feeling lazy, so lets just use built in tools today
+#Thing is I actually did problem 6(a) before this, where I already explored the normal formula
+
+t_value = summary(model)$coefficients["Weight","t value"]
+alpha = 0.01
+t_crit = abs(qt(alpha/2,nrow(data)-2))
+
+if (t_value<t_crit)
+{
+  cat("Hypothesis Accepted Since the calculated t value of ",t_value,"is on the left region of the critical t value of ",t_crit,"\n")
+  
+}else
+{
+  cat("Hypothesis Rejected Since the calculated t value of ",t_value,"is on the right region of the critical t value of ",t_crit,"\n")
+}
+
+#problem (vII)...
+#basically it's the correlation coefficient
+
+r2 = summary(model)$r.squared
+perct = r2*100
+cat(perct, "% of of the variation in infant chest sizes is explained by differences in weight")
+
