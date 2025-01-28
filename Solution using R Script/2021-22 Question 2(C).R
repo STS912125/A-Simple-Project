@@ -26,3 +26,17 @@ cat("the probability that neither line is busy more than half the time is ",prob
 prob_of_75 = integral2(fn ,xmin = 0.75, xmax = 1, ymin = 0, ymax = 1)
 
 cat("the probability that the first line is busy more than 75% of the time is ",prob_of_75[["Q"]],"\n")
+
+#Let's try plotting this :)
+
+x_values = seq(0,1,length.out = 50)
+y_values = seq(0,1,length.out = 50)
+z_values = outer(x_values,y_values,fn)
+
+persp(x_values,
+      y_values,
+      z_values, 
+      xlab = "X", ylab = "Y", zlab = "Probability Density",
+      theta = 30, phi = 30,
+      scale = TRUE,
+      col = "blue")
