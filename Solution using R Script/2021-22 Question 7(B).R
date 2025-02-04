@@ -9,22 +9,20 @@
 # (i) Construct a 95% confidence interval for p.
 # Would you conclude that the new system is better?
 
-mu = 0.8
+p = 0.8
 n = 40
 no_of_succes = 34
-p0 = no_of_succes/n
-sigma = mu*(1-mu)/n
+p_bar = no_of_succes/n
+sigma = p_bar*(1-p_bar)/n
 
-
-alpha =0.95
-prob = (1-alpha)/2
-
-z_crit = qnorm(prob)
+conf = 0.95
+alpha = (1-conf)/2
+z_crit = qnorm(conf)
 
 se = abs(z_crit)*sqrt(sigma)
 
-uB = p0 + se
-lB = p0 + se
+uB = p_bar + se
+lB = p_bar + se
 
 cat("95% Confidence Interval for Y:", lB, "to", uB, "\n")
 #Would I conclude if the new system is better?
@@ -33,8 +31,9 @@ cat("95% Confidence Interval for Y:", lB, "to", uB, "\n")
 
 #calculating the pvalue
 
-z_calc = (p0-mu)/sqrt(sigma)
-p_value = 1-qnorm(abs(z_calc))
+z_calc = (p_bar-p)/sqrt(sigma)
+p_value = 1-pnorm(abs(z_calc))
+alpha = 1-conf #since it's a two tailed test here
 
 #I think its not significant so the new system is not better
 if (p_value > alpha)
