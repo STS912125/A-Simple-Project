@@ -14,7 +14,7 @@
 # there is no diffrence in the yielding capabilities of the 3 varieties of potatoes. Use a
 # 0.05 level of significance. Draw conclusions.
 
-#First I tried to do this in a  very ameture way, manually calculating everything..
+#First I tried to do this by manually calculating everything..
 
 Location = factor(rep(1:4, times = 3))
 Variety = factor(rep(c('A','B','C'), each = 4))
@@ -25,7 +25,6 @@ C = c(12,21,9,10)
 Yield = c(A,B,C)
 
 data = data.frame(Location,Variety,Yield)
-
 
 SST = var(data$Yield)*(nrow(data)-1)
 
@@ -81,4 +80,8 @@ ggplot(pltdata, aes(x=x,y=y))+
 
 #doing this using the built in functions in R
 
-aov()
+AovModel = aov(Yield ~ Variety + Location, data)
+
+summary(AovModel)
+
+#looking at the values, looks like my manual calculations were correct :)
