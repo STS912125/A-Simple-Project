@@ -17,7 +17,7 @@
 
 f = function(y){(y**4)*(1-(y**3))}
 variable = integrate(f,lower = 0,upper = 1)
-k = 1/variable$value
+k = variable$value
 
 FDist = function(y){(1/k) * (y**4) * (1-(y**3))}
 
@@ -27,3 +27,17 @@ p_80 = integrate(FDist,lower = 0.8,upper = 1)
 
 
 cat("(i) ans: ",k,"\n(ii) ans: ",p_50$value,"\n(iii) ans: ",p_80$value,"\n")
+
+library(ggplot2)
+
+y_values = seq(0, 1, by = 0.01)
+pdf_values = sapply(y_values, FDist)
+
+# Create dataframe for ggplot
+plot_data = data.frame(y = y_values, density = pdf_values)
+
+# Plot the PDF
+ggplot(plot_data, aes(x = y, y = density)) +
+  geom_line() +
+  labs(title = "PDF of Y", x = "y", y = "Density") +
+  geom_vline(xintercept = c(0.50,0.80), color ="blue")
